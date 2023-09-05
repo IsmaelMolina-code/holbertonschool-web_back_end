@@ -4,4 +4,4 @@
 def insert_school(mongo_collection, **kwargs):
     """Inserts a school into the database"""
     mongo_collection.insert_one(kwargs)
-    return (kwargs.get(u'_id'))
+    return (kwargs.get('_id'))
