@@ -40,7 +40,7 @@ class Server:
         next_page = page + 1 if page < total_pages else None
         prev_page = page - 1 if page > 1 else None
         hyper = {
-            'page_size': len(dataset[index_range(page, page_size)]),
+            'page_size': len(dataset) // page_size,
             'page': page,
             'data': self.get_page(page, page_size),
             'next_page': next_page,
@@ -48,6 +48,7 @@ class Server:
             'total_pages': total_pages
         }
         return hyper
+
 
 def index_range(page, page_size):
     """
