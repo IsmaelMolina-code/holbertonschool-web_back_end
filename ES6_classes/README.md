@@ -1,0 +1,1 @@
+#Directory to work with EcmaScript6 Classes
